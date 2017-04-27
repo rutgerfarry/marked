@@ -3,7 +3,7 @@
 > A full-featured markdown parser and compiler, written in JavaScript. Built
 > for speed.
 
-[![NPM version](https://badge.fury.io/js/marked.png)][badge]
+[![Build Status](https://travis-ci.org/rutgerfarry/marked.svg?branch=master)](https://travis-ci.org/rutgerfarry/marked)
 
 ## Install
 
@@ -267,22 +267,6 @@ Default: `false`
 
 Use "smart" typograhic punctuation for things like quotes and dashes.
 
-## Access to lexer and parser
-
-You also have direct access to the lexer and parser if you so desire.
-
-``` js
-var tokens = marked.lexer(text, options);
-console.log(marked.parser(tokens));
-```
-
-``` js
-var lexer = new marked.Lexer(options);
-var tokens = lexer.lex(text);
-console.log(tokens);
-console.log(lexer.rules);
-```
-
 ## CLI
 
 ``` bash
@@ -312,6 +296,12 @@ disadvantage in the benchmarks above.
 
 Along with implementing every markdown feature, marked also implements [GFM
 features][gfmf].
+
+## Philosophy behind forking marked
+
+1. The test suite doesn't pass
+2. There are a building number of issues and unaddressed pull requests
+3. Renderer only supports returning text, I want to add the ability to return objects
 
 ## Benchmarks
 
