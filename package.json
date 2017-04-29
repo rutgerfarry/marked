@@ -24,13 +24,27 @@
     "html"
   ],
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "jest": "^19.0.2",
     "markdown": "*",
     "showdown": "*",
     "standard": "^10.0.2"
   },
   "scripts": {
-    "test": "node __test__",
+    "test": "jest __tests__/index.js",
     "bench": "node test --bench"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "afterAll",
+      "afterEach",
+      "beforeAll",
+      "beforeEach",
+      "describe",
+      "expect",
+      "require",
+      "test"
+    ]
   }
 }
